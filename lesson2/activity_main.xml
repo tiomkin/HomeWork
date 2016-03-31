@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/upText"
+        android:textSize="25dp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/sherlock_done"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/image"
+        android:layout_above="@+id/button">
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+
+            <TableRow
+                android:layout_margin="1dp">
+                <TextView
+                    android:text="@string/num"
+                    style="@style/TextInTableRow"/>
+                <TextView
+                    android:text="@string/name"
+                    style="@style/TextInTableRow"/>
+                <TextView
+                    android:text="@string/surname"
+                    style="@style/TextInTableRow"/>
+                <TextView
+                    android:text="@string/age"
+                    style="@style/TextInTableRow"/>
+                <TextView
+                    android:text="@string/degree"
+                    style="@style/TextInTableRow"/>
+            </TableRow>
+            <TableRow
+                android:layout_margin="1dp">
+                <TextView
+                    android:id="@+id/num"
+                    style="@style/TextInTableRow"/>
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/TextInTableRow"/>
+                <TextView
+                    android:id="@+id/surname"
+                    style="@style/TextInTableRow"/>
+                <TextView
+                    android:id="@+id/age"
+                    style="@style/TextInTableRow"/>
+                <TextView
+                    android:id="@+id/degree"
+                    style="@style/TextInTableRow"/>
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/buttonText"
+        android:textSize="20dp"/>
+
+    <ProgressBar
+        android:layout_below="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"
+        android:visibility="gone"/>
+</RelativeLayout>

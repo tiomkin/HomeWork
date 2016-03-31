@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HomeWork2</string>
+    <string name="upText">Кто шпион в наших рядах?</string>
+    <string name="buttonText">Найти шпиона</string>
+    <string name="num">№</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="age">Возраст</string>
+    <string name="degree">Образование</string>
+</resources>
