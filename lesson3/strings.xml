@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HomeWork3</string>
+    <string name="poland">Польша</string>
+    <string name="austria">Австрия</string>
+    <string name="italy">Италия</string>
+    <string name="columbia">Колумбия</string>
+    <string name="madagascar">Мадагаскар</string>
+    <string name="thailand">Таиланд</string>
+    <string name="denmark">Дания</string>
+</resources>
