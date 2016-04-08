@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="Theme.MyTheme" parent="AppTheme">
-        <item name="android:windowAnimationStyle">@style/exitActivity</item>
-        <item name="android:activityCloseExitAnimation">@style/exitActivity</item>
-    </style>
-</resources>
