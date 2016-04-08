@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">HomeWork6</string>
-    <string name="message_main">Нажмите кнопку, чтобы перейти на Activity с анимацией!</string>
-    <string name="message_second">Я и есть Activity с анимацией</string>
-</resources>
