@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ public class MainActivity extends Activity{
     private EditText mPasswordEditText;
     private Button mButtonLogin, mButtonRegister;
     private TextView mTextView;
+    private ProgressBar mPogressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class MainActivity extends Activity{
         mTextView = (TextView) findViewById(R.id.tv_text);
         mLoginEditText = (EditText) findViewById(R.id.et_login);
         mPasswordEditText = (EditText) findViewById(R.id.et_password);
+        mPogressBar = (ProgressBar) findViewById(R.id.progressBarLogin);
 
         //Отправляем на Backendless данные пользователя и если пользователь существует стартуем LogedInActivity по нажатию на кнопку Login
         mButtonLogin.setOnClickListener(new View.OnClickListener() {
@@ -44,10 +47,13 @@ public class MainActivity extends Activity{
                         String.valueOf(mPasswordEditText.getText()));
 
                 // тут можно запустить ProgressBar
+                mPogressBar.setVisibility(ProgressBar.VISIBLE);
+
                 ServiceBroker.getInstance().login(loginRequest, new LoginCallback() {
                     @Override
                     public void response(boolean isError) {
                         // а тут остановить ProgressBar
+                        mPogressBar.setVisibility(ProgressBar.GONE);
                         if (isError) {
                             //mTextView.setText("Ошибка");
                             Toast.makeText(MainActivity.this, "Проверьте логин или пароль", Toast.LENGTH_SHORT).show();

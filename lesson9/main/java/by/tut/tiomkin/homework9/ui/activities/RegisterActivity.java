@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import by.tut.tiomkin.homework9.R;
@@ -18,6 +19,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     EditText mEmail, mPassword, mPasswordAgain;
     Button mButton;
+    ProgressBar mProgressBarRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
         mPassword = (EditText) findViewById(R.id.reg_pass);
         mPasswordAgain = (EditText) findViewById(R.id.reg_pass_again);
         mButton = (Button) findViewById(R.id.reg_bt_register);
+        mProgressBarRegister = (ProgressBar) findViewById(R.id.progressBarRegister);
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,10 +43,14 @@ public class RegisterActivity extends AppCompatActivity {
                             pass1
                     );
 
+                    mProgressBarRegister.setVisibility(ProgressBar.VISIBLE);
+
                     ServiceBroker.getInstance().register(registerRequest, new RegisterCallback() {
                         @Override
                         public void response(boolean isError) {
                             // а тут остановить ProgressBar
+                            mProgressBarRegister.setVisibility(ProgressBar.GONE);
+
                             if (isError) {
                                 //mTextView.setText("Ошибка");
                                 Toast.makeText(RegisterActivity.this, "ОШИБКА! Не удалось зарегистрироваться", Toast.LENGTH_SHORT).show();

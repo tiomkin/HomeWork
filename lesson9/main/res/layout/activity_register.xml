@@ -16,7 +16,8 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
 
 
         <EditText
@@ -50,5 +51,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="Зарегистрироваться" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarRegister"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
 
 </RelativeLayout>
