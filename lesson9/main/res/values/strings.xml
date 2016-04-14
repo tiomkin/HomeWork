@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HomeWork9</string>
+    <string name="login_successfull">Вы успешно вошли в приложение</string>
+    <string name="bt_login">Войти</string>
+    <string name="bt_register">Регистрация</string>
+    <string name="register_successfull">Вы успешно зарегистрировались</string>
+</resources>
