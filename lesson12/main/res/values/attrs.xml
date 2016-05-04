@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+
+    <!--
+        xml attributes for widgets (TTextView, TButton etc.)
+        look at widgets/Typefaces.java and assets/fonts/
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+     -->
+    <declare-styleable name="TStyle">
+        <attr name="typeface" format="enum">
+            <enum name="Monda_Bold" value="0" />
+            <enum name="Monda_Regular" value="1" />
+        </attr>
+        <attr name="save" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="MyCircleDiagram">
+        <!--<attr name="text" format="string"/>
+        <attr name="textSize" format="integer"/>
+        <attr name="color" format="color"/>-->
+        <attr name="diagramSize" format="dimension"/>
+    </declare-styleable>
+
+
+
+</resources>
